@@ -35,7 +35,27 @@
                         $textarea = $_POST["text"];
                         
                         echo  $textname. " "; 
-                        echo $textarea ?>
+                        echo $textarea;
+                        
+                        $filename = 'file.txt';
+                        $handler = fopen($filename, 'a+');
+
+                        if (false === $handler) {
+                            printf('Impossibile aprire il file %s', $filename);
+                            exit;
+                        }
+
+                        
+                            fwrite($handler, "$textname\n");
+                            fwrite($handler, "$textarea\n");
+                            
+                        
+
+                        fclose($handler);
+
+                        ?>
+
+                        
                     </p>
                     <fieldset>
                         <legend>Inserisci una nota</legend>
