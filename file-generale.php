@@ -29,8 +29,13 @@
                 <div class="col-6 offset-3">
                     <p class="notes">
                         <!-- stampare qui le note salvate -->
-                        <?php echo $_POST["name"] . " "; 
-                        echo $_POST["text"] ?>
+                        <?php 
+                        
+                        $textname = $_POST["name"];
+                        $textarea = $_POST["text"];
+                        
+                        echo  $textname. " "; 
+                        echo $textarea ?>
                     </p>
                     <fieldset>
                         <legend>Inserisci una nota</legend>
